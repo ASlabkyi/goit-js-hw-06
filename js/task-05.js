@@ -3,7 +3,8 @@ const userNameOutputEl = document.querySelector("#name-output");
 
 formInputEl.addEventListener("input", (event) => {
   if (!event.target.value.trim()) {
-    return (userNameOutputEl.textContent = "Anonymous");
+    userNameOutputEl.textContent = "Anonymous";
+  } else {
+    userNameOutputEl.textContent = event.target.value.trim();
   }
-  userNameOutputEl.textContent = event.target.value.trim();
 });
