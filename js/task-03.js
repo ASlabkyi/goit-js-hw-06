@@ -25,8 +25,3 @@ const makeGalleryItem = ({ url, alt }) =>
 const galleryItem = images.map(makeGalleryItem).join("");
 
 galleryListEl.insertAdjacentHTML("afterbegin", galleryItem);
-
-galleryListEl.style.display = 'flex';
-galleryListEl.style.alignItems = 'center';
-galleryListEl.style.gap = '30px';
-

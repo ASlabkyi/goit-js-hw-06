@@ -8,6 +8,7 @@ const boxesContainerEl = document.querySelector("#boxes");
 
 const createBoxes = (amount) => {
   amount = controlsEl.firstElementChild.value;
+  boxesContainerEl.innerHTML = "";
 
   for (let i = 0; i < amount; i += 1) {
     const newBoxes = document.createElement("div");
@@ -18,12 +19,11 @@ const createBoxes = (amount) => {
 
     boxesContainerEl.insertAdjacentElement("beforeend", newBoxes);
   }
-  
 };
 
 const destroyBoxes = () => {
   boxesContainerEl.innerHTML = "";
-  controlsEl.firstElementChild.value = ''
+  controlsEl.firstElementChild.value = "";
 };
 
 btnsEl[0].addEventListener("click", createBoxes);
